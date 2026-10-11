@@ -666,6 +666,13 @@
 
       // Current year in footer
       document.getElementById("year").textContent = new Date().getFullYear();
+      // Email: sin espacios y en minusculas
+      const campoEmail = document.getElementById("email");
+      if (campoEmail) {
+        campoEmail.addEventListener("input", function () {
+          this.value = this.value.replace(/\s/g, "").toLowerCase();
+        });
+      }
     </script>
   </body>
 </html>
